@@ -35,7 +35,7 @@ public class RecoverLogCreater {
         OutputStream os = null;
         BufferedReader reader = null;
         try {
-            reader = new BufferedReader(new InputStreamReader(new FileInputStream(mLogFilePath)));
+            reader = new BufferedReader(new InputStreamReader(new FileInputStream(mLogFilePath), "UTF-8"));
             os = new FileOutputStream(recoverLogFile);
             String readLine = null;
             String regx = "\\[PlayerEvent] (\\d+)";
